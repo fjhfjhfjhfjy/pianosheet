@@ -1,0 +1,164 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>fjy的谱库-第二页</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="icon" href="img/icon.png" sizes="16x16" type="image/x-icon">
+</head>
+
+<body>
+	<div class="Coming-block">
+	
+		<div class="page">
+		
+		</div>
+		<div class="content">
+			<div class="w3l-coming-soon-page">
+				<div class="coming-block">
+					<h2>fjy的谱库-第二页</h1>
+				</div>
+			</div>
+				
+		<div>
+		<table align="center" width="600" cellspacing="0" border="1" bordercolor=#000000>
+		<tr>
+			<td align="center">作者-谱名</td>
+			<td align="center">视频</td>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		</table>
+		
+		<table align="center" width="600" cellspacing="0" border="0" bordercolor=#000000>
+		<tr>
+			<td align="center"><a style="color: #00f;" href="index.html">上一页</a></td>
+			<td align="center"><a style="color: #00f;" href="">下一页</a></td>
+		</tr>
+		</table>
+		</div>
+		
+		<div>
+			<br> <h3>持续更新中..
+		</div>
+		
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+        
+        <script>
+            var lFollowX = 0,
+                lFollowY = 0,
+                x = 0,
+                y = 0,
+                friction = 1 / 30;
+
+            function animate() {
+                x += (lFollowX - x) * friction;
+                y += (lFollowY - y) * friction;
+
+                translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+                $('.page').css({
+                    '-webit-transform': translate,
+                    '-moz-transform': translate,
+                    'transform': translate
+                });
+
+                window.requestAnimationFrame(animate);
+            }
+
+            $(window).on('mousemove click', function (e) {
+
+                var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+                var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+                lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+                lFollowY = (10 * lMouseY) / 100;
+
+            });
+
+            animate();
+        </script>
+    </div>
+	<div class="footer">
+	<p align="center">
+	  "<a href="https://github.com/fjhfjhfjhfjy/pianosheet">fjy</a>创建;<a href="https://vercel.com/">vercel</a>强力驱动"
+	</p>
+	</div>
+</body>
+
+</html>
