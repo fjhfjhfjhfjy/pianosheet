@@ -1,11 +1,29 @@
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>fjy的谱库</title>
-		<link rel="icon" href="img/icon.png" sizes="16x16" type="image/x-icon">
-	</head>
-	<body>
-		<table bordercolor=#dfb665 align="center" width="600" cellspacing="0" border="1" color="#dfb665">
+
+<head>
+	<meta charset="UTF-8">
+	<title>fjy的谱库</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="icon" href="img/icon.png" sizes="16x16" type="image/x-icon">
+</head>
+
+<body>
+	<div class="Coming-block">
+	
+		<div class="page">
+		
+		</div>
+		<div class="content">
+			<div class="w3l-coming-soon-page">
+				<div class="coming-block">
+					<h2>fjy的谱库</h1>
+				</div>
+			</div>
+				
+		<div>
+		<table  align="center" width="600" cellspacing="0" border="1" bordercolor="#dfb665">
 		<tr>
 			<td align="center">作者-谱名</td>
 			<td align="center">视频</td>
@@ -13,18 +31,102 @@
 			<td><a href="Lovely.html">Billie Eilish, Khalid - lovely</a></td>
 			<td><a href="https://www.youtube.com/watch?v=XhQq0aXhEos">点击前往youtube</a></td>
 		</tr>
-		
 		<tr>
 			<td><a href="Ocean_Eyes.html">Billie Eilish- Ocean Eyes</a></td>
 			<td><a href="https://www.youtube.com/watch?v=IXZ-leHBdFk">点击前往youtube</td>
 		</tr>
-		
 		<tr>
 			<td><a href="Nuvole_Bianche.html">Ludovico Einaudi - Nuvole Bianche</a></td>
 			<td><a href="https://www.youtube.com/watch?v=4VR-6AS0-l4">点击前往youtube</td>
 		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
+		<tr>
+			<td>空</td>
+			<td>空</td>
+		</tr>
 		</table>
+		</div>
 		
-		<br><h3 align="center">持续更新中..
-	</body>
+		<div>
+			<br> <h3>持续更新中..
+		</div>
+		
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+        
+        <script>
+            var lFollowX = 0,
+                lFollowY = 0,
+                x = 0,
+                y = 0,
+                friction = 1 / 30;
+
+            function animate() {
+                x += (lFollowX - x) * friction;
+                y += (lFollowY - y) * friction;
+
+                translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+                $('.page').css({
+                    '-webit-transform': translate,
+                    '-moz-transform': translate,
+                    'transform': translate
+                });
+
+                window.requestAnimationFrame(animate);
+            }
+
+            $(window).on('mousemove click', function (e) {
+
+                var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+                var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+                lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+                lFollowY = (10 * lMouseY) / 100;
+
+            });
+
+            animate();
+        </script>
+    </div>
+</body>
+
 </html>
